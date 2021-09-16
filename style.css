@@ -24,15 +24,31 @@ body {
           align-items: center;
 }
 
-body > * {
-  padding: 0 1.5rem;
-}
-
 body > p {
   color: #ce9797;
   text-align: center;
   line-height: 1.2;
   font-weight: 400;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+form {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color: #ce9797;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 form ::-webkit-input-placeholder {
@@ -57,6 +73,22 @@ form ::placeholder {
   color: #ce9797;
   font-weight: 300;
   opacity: 0.8;
+}
+
+form input {
+  border: none;
+  display: block;
+  padding: 1rem;
+}
+
+form button {
+  border: none;
+  display: block;
+  border-radius: 15px;
+  padding: 0;
+  min-width: 30px;
+  width: 40px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
 }
 
 footer {
