@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 2rem;
+}
+
+body {
+    margin: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    #main-img {
+        content: url(images/hero-mobile.jpg);       
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 376px) {
+    #main-img {
+        content: url(images/hero-desktop.jpg);
+    }
+}
