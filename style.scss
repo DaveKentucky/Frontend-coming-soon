@@ -1,19 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .header {
+    width: 100%;
     padding: 2rem;
 }
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > * {
+        padding: 0 1.5rem;
+    }
+    & > p {
+        color:hsl(0, 36%, 70%);
+        text-align: center;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+}
+
+form {
+    ::placeholder {
+        color:hsl(0, 36%, 70%);
+        font-weight: 300;
+        opacity: 0.8;
+    }
+
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    & > p {
+        margin: 5px;
+        &:nth-child(1) {
+            color: hsl(0, 36%, 70%);
+            font-weight: 300;
+        }
+    }
 }
 
 /* Mobile */
 @media screen and (max-width: 375px) {
     #main-img {
         content: url(images/hero-mobile.jpg);       
+    }
+
+    h1 {
+        text-align: center;
     }
 }
 

@@ -1,20 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .header {
+  width: 100%;
   padding: 2rem;
 }
 
 body {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > * {
+  padding: 0 1.5rem;
+}
+
+body > p {
+  color: #ce9797;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+form ::-webkit-input-placeholder {
+  color: #ce9797;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+form :-ms-input-placeholder {
+  color: #ce9797;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+form ::-ms-input-placeholder {
+  color: #ce9797;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+form ::placeholder {
+  color: #ce9797;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+}
+
+h1 > p {
+  margin: 5px;
+}
+
+h1 > p:nth-child(1) {
+  color: #ce9797;
+  font-weight: 300;
 }
 
 /* Mobile */
 @media screen and (max-width: 375px) {
   #main-img {
     content: url(images/hero-mobile.jpg);
+  }
+  h1 {
+    text-align: center;
   }
 }
 
