@@ -5,11 +5,6 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.header {
-  width: 100%;
-  padding: 2rem;
-}
-
 body {
   margin: 0;
 }
@@ -137,6 +132,10 @@ h1 > p:nth-child(1) {
   #main-img {
     content: url(images/hero-mobile.jpg);
   }
+  .header {
+    width: 100%;
+    padding: 2rem;
+  }
   .main {
     -ms-grid-columns: 1;
         grid-template-columns: 1;
@@ -167,6 +166,11 @@ h1 > p:nth-child(1) {
     width: 100%;
     height: 100%;
   }
+  .header {
+    width: 40%;
+    margin: auto;
+    padding: 4rem 0;
+  }
   body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -179,6 +183,17 @@ h1 > p:nth-child(1) {
     -ms-grid-rows: (auto)[4];
         grid-template-rows: repeat(4, auto);
         grid-template-areas: "logo-area img-area" "header-area img-area" "text-area img-area" "form-area img-area";
+  }
+  .text-content > * {
+    width: 40%;
+  }
+  .text-content > p {
+    line-height: 1.7;
+    text-align: left;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
