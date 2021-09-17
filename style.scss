@@ -12,11 +12,22 @@
 
 body {
     margin: 0;
+}
+
+.main {
+    margin: 0;
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+.text-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     & > p {
+        grid-area: text-area;
         color:hsl(0, 36%, 70%);
         text-align: center;
         line-height: 1.2;
@@ -27,16 +38,15 @@ body {
 }
 
 form {
+    grid-area: form-area;
     border-style: solid;
     border-width: 1px;
     border-radius: 30px;
     border-color: hsl(0, 36%, 70%);
     overflow: hidden;
     display: flex;
-    width: 80%;
     flex-direction: row;
     padding: 0;
-    margin: 1rem 1rem 4rem 1rem;
     ::placeholder {
         color:hsl(0, 36%, 70%);
         font-weight: 300;
@@ -54,7 +64,6 @@ form {
         border-radius: 30px;
         padding: 0;
         min-width: 30px;
-        width: 40px;
         background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         flex-grow: 1;
     }
@@ -67,6 +76,7 @@ footer {
 }
 
 h1 {
+    grid-area: header-area;
     font-weight: 600;
     font-size: 2.5rem;
     letter-spacing: 10px;
@@ -85,8 +95,27 @@ h1 {
         content: url(images/hero-mobile.jpg);       
     }
 
+    .main {
+        grid-template-columns: 1;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "logo-area"
+        "img-area"
+        "header-area"
+        "text-area"
+        "form-area";
+    }
+
     h1 {
         text-align: center;
+    }
+
+    form {
+        width: 80%;
+        margin: 1rem 1rem 4rem 1rem;
+        & button {
+            width: 40px;
+        }
     }
 }
 
@@ -94,9 +123,22 @@ h1 {
 @media screen and (min-width: 376px) {
     #main-img {
         content: url(images/hero-desktop.jpg);
+        grid-area: img-area;
+        width: 100%;
+        height: 100%;
     }
 
     body {
         flex-direction: row;
+    }
+
+    .main {
+        grid-template-columns: 60vw 40vw;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "logo-area img-area"
+        "header-area img-area"
+        "text-area img-area"
+        "form-area img-area";
     }
 }
