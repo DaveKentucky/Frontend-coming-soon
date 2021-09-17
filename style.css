@@ -49,7 +49,6 @@ form {
   border-width: 1px;
   border-radius: 30px;
   border-color: #ce9797;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +85,7 @@ form ::placeholder {
 
 form input {
   border: none;
+  border-radius: 30px;
   display: block;
   padding: 1rem;
   -webkit-box-flex: 2;
@@ -103,6 +103,8 @@ form button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-box-shadow: 9px 9px 25px -1px #ce9797;
+          box-shadow: 9px 9px 25px -1px #ce9797;
 }
 
 footer {
@@ -176,6 +178,7 @@ h1 > p:nth-child(1) {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    background: linear-gradient(135deg, white, #fff5f5);
   }
   .main {
     -ms-grid-columns: 60vw 40vw;
@@ -194,6 +197,12 @@ h1 > p:nth-child(1) {
   h1 {
     font-size: 4rem;
     margin-bottom: 0;
+  }
+  form button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    -webkit-box-shadow: 9px 9px 20px 2px #ce9797;
+            box-shadow: 9px 9px 20px 2px #ce9797;
   }
 }
 /*# sourceMappingURL=style.css.map */
