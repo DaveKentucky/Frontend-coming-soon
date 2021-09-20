@@ -1,3 +1,5 @@
+import variables from './variables.scss';
+
 const emailForm = document.getElementById('email-form');
 
 function validateForm() {
@@ -8,7 +10,9 @@ function validateForm() {
     } else {
         valid = validateEmail(email);
     }
-
+    if (!valid) {
+        document.querySelector('form').style.borderColor = variables.errorColor;
+    }
     return valid;
 }
 
