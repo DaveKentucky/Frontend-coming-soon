@@ -91,6 +91,11 @@ form input {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: none;
 }
 
 form button {
@@ -127,6 +132,22 @@ h1 > p {
 h1 > p:nth-child(1) {
   color: #ce9797;
   font-weight: 300;
+}
+
+#error-icon {
+  display: none;
+  z-index: 1;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+#error-message {
+  display: none;
+  z-index: 1;
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: #f96262;
 }
 
 /* Mobile */
@@ -197,6 +218,9 @@ h1 > p:nth-child(1) {
   h1 {
     font-size: 4rem;
     margin-bottom: 0;
+  }
+  form {
+    margin: 1rem 0;
   }
   form button:hover {
     cursor: pointer;
