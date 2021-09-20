@@ -9,8 +9,7 @@
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <link rel="stylesheet" href="style.css">
-  <script type="module" href="scss_variables.js"></script>
-  <script type="module" src="email-verification.js" defer></script>
+  <script type="text/javascript" src="email-verification.js" defer></script>
 </head>
 <body>
   <div class="main">
@@ -27,14 +26,14 @@
       <p>Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>  
-      <form id="email-form" action="submit" autocomplete="off" onsubmit="return validateForm();">
+      <form id="email-form" action="index.html" autocomplete="off" onsubmit="return validateForm();">
         <input type="text" id="email-address" placeholder="Email Address">
-        <img id="error-icon" src="images/icon-error.svg" alt="error icon">
-        <button>
+        <img class="error" id="error-icon" src="images/icon-error.svg" alt="error icon">
+        <button id="email-button">
           <img src="images/icon-arrow.svg" alt="submit email address">
         </button>
       </form>
-      <p id="error-message">Please provide a valid email</p>
+      <p class="error" id="error-message">Please provide a valid email</p>
     </div>
   </div>
   

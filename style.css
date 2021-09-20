@@ -62,6 +62,7 @@ form {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0;
+  overflow: visible;
 }
 
 form ::-webkit-input-placeholder {
@@ -108,11 +109,8 @@ form button {
   display: block;
   border-radius: 30px;
   padding: 0;
-  min-width: 30px;
+  margin: -1px;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -webkit-box-shadow: 9px 9px 25px -1px #ce9797;
           box-shadow: 9px 9px 25px -1px #ce9797;
 }
@@ -227,9 +225,13 @@ h1 > p:nth-child(1) {
   form {
     margin: 1rem 0;
   }
+  form button {
+    width: 80px;
+  }
   form button:hover {
     cursor: pointer;
-    opacity: 0.9;
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
     -webkit-box-shadow: 9px 9px 20px 2px #ce9797;
             box-shadow: 9px 9px 20px 2px #ce9797;
   }
