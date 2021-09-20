@@ -26,15 +26,14 @@ function validateForm() {
         form.style.borderWidth = '2px';
         emailButton.style.margin = '-2px';
         errorElements.forEach(element => {
-            element.style.display = 'block';{
+            element.style.display = 'block';
             element.animate([
                 { transform: 'translateY(0px)' },
                 { transform: 'translateY(-10px)' },
                 { transform: 'translateY(0px)'},
                 { transform: 'translateY(-5px)' },
                 { transform: 'translateY(0px)' },
-            ], {duration: 500})
-            }
+            ], {duration: 500});
         });
     }
     return valid;
